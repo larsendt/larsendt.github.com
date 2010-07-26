@@ -7,10 +7,35 @@
 	body {
 		font-family: 'Crimson Text', arial, serif; 
 	}
+	
+	.wrapper {
+		width: 500px;
+		margin: auto;
+	}
+	.content {
+		width: 400px;
+		float: left;
+	}
+	.sidebar {
+		width: 100px;
+		float: right;
+		margin-top: 100px;
+	}
 </style>
 </head>
 <body>
-<h1>{{ page.title }}</h1>
-{{ content }}
+<div class="wrapper">
+	<div class="content">
+		<h1>{{ page.title }}</h1>
+		{{ content }}<br>
+	</div>
+	
+	<div class="sidebar">
+		{% for post in site.posts limit:5 %}
+			<p><a href="{{ post.url }}">{{ post.title }}</a></p>
+		<em>Posted on {{ post.date | date_to_long_string }}.</em>
+		{% endfor %}
+	</div>
+</div>
 </body>
 </html>
