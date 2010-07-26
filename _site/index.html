@@ -7,34 +7,42 @@
 	body {
 		font-family: 'Crimson Text', arial, serif; 
 	}
-	
+	a:link {
+		text-decoration: none;
+	}
 	.wrapper {
-		width: 500px;
+		width: 400px;
 		margin: auto;
 	}
 	.content {
-		width: 400px;
-		float: left;
+		width: 100%;
 	}
-	.sidebar {
-		width: 100px;
-		float: right;
-		margin-top: 100px;
+	.header {
+		width: 100%;
+		border-bottom: thin solid #000;
+		padding-bottom: 20px;
+	}
+	.title {
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	.caption {
+		font-style: italic;
+		font-size: 10pt;
 	}
 </style>
 </head>
 <body>
 <div class="wrapper">
-	<div class="content">
-		<h1>Blog</h1>
-		YARRRR! It's me blog!
-<br>
+	<div class="header">
+		<span class="title">Blog</span><span class="caption"> YARRRR! It's me blog!
+</span>
 	</div>
-	
-	<div class="sidebar">
+	<div class="content">
 		
-			<p><a href="/2010/07/25/first-post.html">Hi</a></p>
-		<em>Posted on 25 July 2010.</em>
+			<p><a href="/2010/07/25/first-post.html">First Post</a></p>
+			<p>I&#8217;m terrible about blogging, so don&#8217;t expect to see updates often.</p>
+			<em>Posted on 25 July 2010 by Dane.</em>
 		
 	</div>
 </div>

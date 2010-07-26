@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hi
+title: First Post
 ---
 I'm terrible about blogging, so don't expect to see updates often.
 

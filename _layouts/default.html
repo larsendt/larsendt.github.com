@@ -7,33 +7,41 @@
 	body {
 		font-family: 'Crimson Text', arial, serif; 
 	}
-	
+	a:link {
+		text-decoration: none;
+	}
 	.wrapper {
-		width: 500px;
+		width: 400px;
 		margin: auto;
 	}
 	.content {
-		width: 400px;
-		float: left;
+		width: 100%;
 	}
-	.sidebar {
-		width: 100px;
-		float: right;
-		margin-top: 100px;
+	.header {
+		width: 100%;
+		border-bottom: thin solid #000;
+		padding-bottom: 20px;
+	}
+	.title {
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	.caption {
+		font-style: italic;
+		font-size: 10pt;
 	}
 </style>
 </head>
 <body>
 <div class="wrapper">
-	<div class="content">
-		<h1>{{ page.title }}</h1>
-		{{ content }}<br>
+	<div class="header">
+		<span class="title">{{ page.title }}</span><span class="caption"> {{ page.content }}</span>
 	</div>
-	
-	<div class="sidebar">
-		{% for post in site.posts limit:5 %}
+	<div class="content">
+		{% for post in site.posts %}
 			<p><a href="{{ post.url }}">{{ post.title }}</a></p>
-		<em>Posted on {{ post.date | date_to_long_string }}.</em>
+			{{ post.content }}
+			<em>Posted on {{ post.date | date_to_long_string }} by Dane.</em>
 		{% endfor %}
 	</div>
 </div>
