@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>First Post</title>
+<title>{{ page.title }}</title>
 <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 <style type="text/css">
 	body {
@@ -42,11 +42,11 @@
 		<span class="title">Blog</span><span class="caption"> YARR! It's me blog!</span>
 	</div>
 	<div class="content">
-		
-			<p><a href="/2010/07/25/first-post.html">First Post</a></p>
-			<p>I&#8217;m terrible about blogging, so don&#8217;t expect to see updates often.</p>
-			<em>Posted on 25 July 2010 by Dane.</em>
-		
+		<p>{{ post.title }}</p>
+		<p>{{ post.content }}</p>
+		<em>Posted on {{ post.date | date_to_long_string }} by Dane.</em>
+		<br>
+		<em><a href="/">Home</a></em>
 	</div>
 </div>
 </body>
